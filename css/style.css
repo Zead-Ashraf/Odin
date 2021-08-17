@@ -2,14 +2,28 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
+section {
+		scroll-snap-align: start;
 }
 
 /****************************liquied*******************************************/
 
 main section.s1 {
 	position: relative;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -66,17 +80,82 @@ main section.s1 h1:nth-child(4) {
 
 
 }
-/******************************************************************************/
+/***********************************Text effect********************************/
 
 main section.s2 {
 	height: 100vh;
 	width: 100%;
-	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 }
 
+main section.s2 .txt {
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 60px;
+	font-weight: 400;
+
+}
+
+main section.s2 .run-text {
+	margin-left: 15px;
+	padding: 0;
+	height: 90px;
+	line-height: 90px;
+	overflow: hidden;
+}
+
+.run-text li {
+	list-style: none;
+	color: cyan;
+	font-size: 60px;
+	font-weight: 400;
+	position: relative;
+	top: 0;
+	animation: slide 12s steps(4) infinite ;
+
+}
+
+@keyframes slide {
+	100% {
+		top: -360px;
+	}
+} 
+
+.run-text li span {
+	position: relative;
+	margin: 5px 0;
+	font-family: 'Fredericka the Great', cursive;
+	line-height: 9px;
+}
+
+
+.run-text li span::after {
+	content:"";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	border-left: 3px solid cyan;
+	animation: typing 3s steps(12) infinite;
+}
+
+@keyframes typing {
+	40%, 60% {
+		left: calc(100% + 30px);
+	}
+
+	100% {
+		left: 0;
+	}
+}
+/******************************************************************************/
 
 main section.s3 {
 	height: 100vh;

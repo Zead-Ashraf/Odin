@@ -218,10 +218,12 @@ main section.s3 {
 	padding: 10px;
 	border: 1px solid rgb(255,0,249);
 	background: transparent;
-	color: #fff;
-	font-size: 18px;
-	cursor: pointer;
+
+
+.card content button:hover {
+	background-color: rgb(255,0,249);
 }
+
 .card:hover content {
 	left:0;
 	opacity: 1;
